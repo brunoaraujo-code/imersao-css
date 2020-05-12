@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://www.napratica.org.br/app/uploads/2018/03/Design-sem-nome-19-1024x683.jpg');
+    background-size: auto 100vh; /*100vw (100% viewpoint weight-largura); 100vh (100% viewpoint high-altura); */
+    font-family: arial;
+    height: 100vh; /*garante que body ocupe toda a tela*/
+}
+  
+a {
+    text-decoration: none; /*tira o sublinhado do link*/
+    color: black;
+  }
+  
+a:hover {
+    text-decoration: underline;
+    color:white;
+}
+  
+.menu ul{
+    display: flex; /*faz todo os itens ficarem um ao lado do outro*/
+    justify-content: space-around; /*justifica o texto; essa propriedade só funciona com  */
+}
+  
+.menu li { 
+    list-style: none; /* tira as 'bolinhas' do item de menu*/
+}
+  
+.menu {
+    background-color: #B0E0E6;
+}
+  
+.site-title, .site-subtitle { /*uma class declarada no html*/
+    text-align: center;
+    color: whitesmoke;
+}
+  
+.site-subtitle { /*uma class declarada no html*/
+    font-style: italic;
+}
