@@ -1,3 +1,11 @@
+/*  sof reset do css */
+
+* { /*tudo que declarar aqui dentro, vai ser aplicado por padrão na página. Seletor mais genérico.*/
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; /*começa a contar o elemento a partir da borda interna*/
+}
+
 body {
     background-image: url('https://www.napratica.org.br/app/uploads/2018/03/Design-sem-nome-19-1024x683.jpg');
     background-size: auto 100vh; /*100vw (100% viewpoint weight-largura); 100vh (100% viewpoint high-altura); */
