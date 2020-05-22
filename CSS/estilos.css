@@ -1,29 +1,66 @@
 /*  sof reset do css */
-
 * { /*tudo que declarar aqui dentro, vai ser aplicado por padrão na página. Seletor mais genérico.*/
     margin: 0;
-    padding: 0; 
+    padding: 0; /*tamanho que fica entre a borda e o texto*/
     box-sizing: border-box; /*começa a contar o elemento a partir da borda interna*/
+    /*border: 4px solid blue;* - tag que define a borda */
 }
 
+
 body {
-    background-image: url('https://www.napratica.org.br/app/uploads/2018/03/Design-sem-nome-19-1024x683.jpg');
+    /*background-image: url('https://www.napratica.org.br/app/uploads/2018/03/Design-sem-nome-19-1024x683.jpg');*/
     background-size: auto 100vh; /*100vw (100% viewpoint weight-largura); 100vh (100% viewpoint high-altura); */
     font-family: arial;
     height: 100vh; /*garante que body ocupe toda a tela*/
+    font-size: 12px;
 }
-  
+/* se a tela tiver pelo menos 200px vai carregar estes estilos. Isso serve para as configurações responsivas 
+quando acessadas por dispositivos de diversos tamanhos de tela*/
+@media (min-width: 200px) { 
+    body {
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 400px) { 
+    body {
+        font-size: 16px;
+    }
+
+}
+
+@media (min-width: 700px) { 
+    body {
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 1000px) { 
+    body {
+        font-size: 21px;
+    }
+
+}
+
+
+header {
+    background-image: url('../img/bannerinicial.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 92vh;
+    display: flex; /*centralizar o elemento verticalmente (ao meio da página)*/
+    justify-content: center; /*só funcionam por causa do flex*/
+    align-items: center;
+}
+
 a {
     text-decoration: none; /*tira o sublinhado do link*/
-    color: black;
-  }
-  
-a:hover {
-    text-decoration: underline;
-    color:white;
 }
   
-.menu ul{
+ 
+.menu ul {
     display: flex; /*faz todo os itens ficarem um ao lado do outro*/
     justify-content: space-around; /*justifica o texto; essa propriedade só funciona com  */
 }
@@ -31,16 +68,89 @@ a:hover {
 .menu li { 
     list-style: none; /* tira as 'bolinhas' do item de menu*/
 }
-  
+
+.menu a {
+    display: block; /*transforma a propriedade a em um bloco para poder usar o padding*/
+    padding: 20px 20px;
+    color: white;
+    
+}
+.menu a:hover {
+    background-color:olivedrab;
+    text-decoration: none;
+    
+}
+
 .menu {
-    background-color: #B0E0E6;
+    background-color:teal;
+    position: fixed;
+    width: 100vw;
+    top: 0; /*só funciona se tiver o Position declarado*/
 }
-  
-.site-title, .site-subtitle { /*uma class declarada no html*/
-    text-align: center;
-    color: whitesmoke;
+
+.site-title, .site-subtitle {
+    color: black;
 }
-  
+.site-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    text-align: right;
+    
+    
+}
 .site-subtitle { /*uma class declarada no html*/
-    font-style: italic;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2em;
+
+}
+
+.portfolio {
+    padding: 2em;
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+    gap: 2em;
+   
+}
+
+@media (min-width: 560px){
+    .grid {
+        grid-template-columns: repeat(2, 240px);
+        justify-content: center;
+       
+    }
+}
+
+@media (min-width: 840px){
+    .grid {
+        grid-template-columns: repeat(3, 240px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1199px){
+    .grid {
+        grid-template-columns: repeat(4, 280px);
+        justify-content: center;
+       
+    }
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-family: 'Poiret One', cursive;
+    margin-bottom: 1.2em;
+}
+
+.img-portfolio {
+    width: 200px; /*largura*/
+    height: 180px; /*altura*/
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 10%;
 }
